@@ -20,7 +20,9 @@ public class Example1_AutoModeration {
 
         Chat chat = AiServices.builder(Chat.class)
                 .chatLanguageModel(OpenAiChatModel
-                        .builder().logRequests(true).logResponses(true).apiKey(System.getenv("OPENAI_API_KEY")).build())
+                        .builder()
+                        .logRequests(true).logResponses(true)
+                        .apiKey(System.getenv("OPENAI_API_KEY")).build())
                 .moderationModel(moderationModel)
                 .build();
 

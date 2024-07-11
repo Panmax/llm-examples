@@ -33,8 +33,9 @@ public class Example1_StaticTools {
 
     public static void main(String[] args) {
 
+        OpenAiChatModel model = OpenAiChatModel.builder().logRequests(true).logResponses(true).apiKey(Utils.OPENAI_API_KEY).build();
         Assistant assistant = AiServices.builder(Assistant.class)
-                .chatLanguageModel(OpenAiChatModel.withApiKey(Utils.OPENAI_API_KEY))
+                .chatLanguageModel(model)
                 .tools(new Calculator())
                 .chatMemory(MessageWindowChatMemory.withMaxMessages(10))
                 .build();

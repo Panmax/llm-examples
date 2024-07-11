@@ -19,8 +19,8 @@ public class Example2_DynamicTools {
                 .apiKey(System.getenv("OPENAI_API_KEY"))
                 .temperature(0.0)
                 .timeout(ofSeconds(60))
-                // .logRequests(true) // NOTE: 可以解开注释看看请求和响应的日志
-                // .logResponses(true)
+                .logRequests(true) // NOTE: 可以解开注释看看请求和响应的日志
+                .logResponses(true)
                 .build();
 
         Assistant assistant = AiServices.builder(Assistant.class)

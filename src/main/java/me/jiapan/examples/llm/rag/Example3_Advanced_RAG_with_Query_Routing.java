@@ -75,6 +75,7 @@ public class Example3_Advanced_RAG_with_Query_Routing {
                 .build();
 
         // create a query router.
+        // NOTE: AI agent?
         Map<ContentRetriever, String> retrieverToDescription = new HashMap<>();
         retrieverToDescription.put(biographyContentRetriever, "biography of John Doe");
         retrieverToDescription.put(termsOfUseContentRetriever, "terms of use of car rental company");
